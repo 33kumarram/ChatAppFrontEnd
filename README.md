@@ -74,7 +74,7 @@ cd BlogAppFrontEnd
 
 npm install
 
-You will also need to set the below mentioned environment variables for the application. 
+You will also need to create a .env file in the root of the project directory, containing the following environment variables: 
 
 REACT_APP_API_URL = API endpoint to make requests to the server. 
 
