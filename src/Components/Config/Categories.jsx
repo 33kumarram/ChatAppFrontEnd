@@ -1,0 +1,26 @@
+export const Categories =[
+    {
+        id:1,
+        type:'All'
+    },
+    {
+        id:2,
+        type:'Tech'
+    },
+    {
+        id:3,
+        type:'Movies'
+    },
+    {
+        id:4,
+        type:'Music'
+    },
+    {
+        id:5,
+        type:'Fashion'
+    },
+    {
+        id:6,
+        type:'Sports'
+    },
+]
