@@ -166,7 +166,7 @@ export const ArticleDetailView = () => {
                     }
                 </Container> :
                 <Container>
-                    <CircularProgress style={{ margin: '20px' }} />
+                    <CircularProgress style={{ margin: '70px' }} />
                 </Container>
             }
         </>

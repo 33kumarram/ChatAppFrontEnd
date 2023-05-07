@@ -5,7 +5,7 @@ import { API_URLS } from '../../Services/ApiUrls';
 import { useSelector } from 'react-redux';
 
 const Container = styled(Box)({
-  marginTop: '100px',
+  marginTop: '35px',
   display: 'flex'
 })
 const StyledTextArea = styled(TextareaAutosize)({
