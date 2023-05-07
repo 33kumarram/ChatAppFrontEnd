@@ -16,7 +16,7 @@ import { actionCreators } from '../../Redux/actionCreators'
 import DrawerComp from "./drawer";
 
 export const Header = () => {
-    const [value, setValue] = useState();
+    const [value, setValue] = useState(0);
     const navigate = useNavigate()
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
