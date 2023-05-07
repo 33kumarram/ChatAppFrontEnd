@@ -26,7 +26,7 @@ export const Banner = () => {
     return (
         <Image>
             <Heading>
-                Article
+                Articles
             </Heading>
             <SubHeading>
                 Put your thoughts here
