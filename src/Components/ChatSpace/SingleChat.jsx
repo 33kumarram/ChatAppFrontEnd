@@ -28,6 +28,7 @@ export const SingleChat = () => {
   const sendMessage = async (e) => {
     if (e.key === "Enter" && pendingMessage !== "") {
       e.preventDefault();
+      socket.emit("stop typing", selectedChat._id);
       const { isSuccess, data } = await API_URLS.sendMessage({
         content: pendingMessage,
         chatId: selectedChat._id,
@@ -42,12 +43,20 @@ export const SingleChat = () => {
   };
 
   const handleChange = (e) => {
+    clearTimeout();
     setPendingMessage(e.target.value);
     if (!socketConnected) return;
     if (!typing) {
       setTyping(true);
       socket.emit("typing", selectedChat._id);
     }
+    let lastTypingTime = new Date().getTime();
+    setTimeout(() => {
+      if (new Date().getTime() - lastTypingTime >= 3000 && typing) {
+        socket.emit("stop typing", selectedChat._id);
+        setTyping(false);
+      }
+    }, 3000);
   };
 
   const fetchAllMessages = async () => {
@@ -70,7 +79,7 @@ export const SingleChat = () => {
   useEffect(() => {
     socket = io(ENDPOINT);
     socket.emit("setup", user);
-    socket.on("connection", () => {
+    socket.on("connected", () => {
       setSocketConnected(true);
     });
     socket.on("typing", () => {
@@ -206,6 +215,7 @@ export const SingleChat = () => {
                 type="text"
               />
             </form>
+            {isTyping && <div>{console.log(isTyping, typing)}</div>}
           </div>
         </div>
       ) : (
@@ -221,7 +231,6 @@ export const SingleChat = () => {
           Click on a user to start chatting
         </div>
       )}
-      {console.log(notifications)}
     </div>
   );
 };
