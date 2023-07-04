@@ -48,6 +48,7 @@ export const SingleChat = () => {
     if (!socketConnected) return;
     if (!typing) {
       setTyping(true);
+      // console.log('typing')
       socket.emit("typing", selectedChat._id);
     }
     let lastTypingTime = new Date().getTime();
