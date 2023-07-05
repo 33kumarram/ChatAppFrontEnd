@@ -1,20 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { API_URLS } from "../Services/ApiUrls";
 import { CustomAlert } from "../customAlerts/customAlert";
-import { actionCreators } from "../../Redux/actionCreators/index";
-import { bindActionCreators } from "redux";
-import { useDispatch } from "react-redux";
 import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 
 export const SignUp = () => {
   const navigate = useNavigate();
-  const formikRed = useRef();
-  // to pass user in redux state
-  const dispatch = useDispatch();
-  const { userLogIn } = bindActionCreators(actionCreators, dispatch);
   // to disable button while submitting the form
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [alert, setAlert] = useState();
@@ -53,13 +46,15 @@ export const SignUp = () => {
   const onSubmit = async (fields, setFieldValue) => {
     setIsSubmitting(true);
     try {
-      let res = await API_URLS.userSignUp(fields);
+      let { isSuccess } = await API_URLS.userSignUp(fields);
       // saving user data in redux state
       //   userLogIn(res.data);
-      showAlert("User created Successfully", "success");
-      setTimeout(() => {
-        navigate("/");
-      }, 1000);
+      if (isSuccess) {
+        showAlert("User created Successfully", "success");
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
+      }
     } catch (error) {
       let err =
         typeof error.message === "object"

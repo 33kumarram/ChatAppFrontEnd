@@ -10,6 +10,8 @@ import { API_URLS } from "../Services/ApiUrls";
 import { CircularProgress } from "@mui/material";
 import { ScrollableChat } from "./ScrollableChat";
 import { io } from "socket.io-client";
+import Lottie from "react-lottie";
+import animationData from "../../animations/typing.json";
 
 var socket, selectedChatCompare;
 const ENDPOINT = process.env.REACT_APP_API_URL;
@@ -24,6 +26,15 @@ export const SingleChat = () => {
   const [socketConnected, setSocketConnected] = useState(false);
   const [typing, setTyping] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    renderSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const sendMessage = async (e) => {
     if (e.key === "Enter" && pendingMessage !== "") {
@@ -48,7 +59,6 @@ export const SingleChat = () => {
     if (!socketConnected) return;
     if (!typing) {
       setTyping(true);
-      // console.log('typing')
       socket.emit("typing", selectedChat._id);
     }
     let lastTypingTime = new Date().getTime();
@@ -87,6 +97,7 @@ export const SingleChat = () => {
       setIsTyping(true);
     });
     socket.on("stop typing", () => {
+      console.log("jkkkkkk");
       setIsTyping(false);
     });
   }, []);
@@ -194,12 +205,22 @@ export const SingleChat = () => {
                 <ScrollableChat />
               </div>
             )}
+            {isTyping && (
+              <div>
+                <Lottie
+                  width={30}
+                  height={30}
+                  options={defaultOptions}
+                  style={{ marginBottom: "15px", marginLeft: "10px" }}
+                />
+              </div>
+            )}
             <form
               style={{
                 marginTop: "auto",
                 maxWidth: "100%",
                 height: "20px",
-                margin: "10px 10px 15px 10px",
+                margin: "0px 10px 15px 10px",
               }}
             >
               <input
@@ -216,7 +237,6 @@ export const SingleChat = () => {
                 type="text"
               />
             </form>
-            {isTyping && <div>{console.log(isTyping, typing)}</div>}
           </div>
         </div>
       ) : (

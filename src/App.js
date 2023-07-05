@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import About from "./Components/about/about";
 import Contact from "./Components/contact/contact";
+import background from "./animations/background.jpg";
 
 const PrivateRoute = ({ token, ...props }) => {
   return token ? (
@@ -23,7 +24,15 @@ function App() {
   const user = useSelector((state) => state.user);
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100vw",
+        height: "140vh",
+      }}
+    >
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={LoginPage} exact />
