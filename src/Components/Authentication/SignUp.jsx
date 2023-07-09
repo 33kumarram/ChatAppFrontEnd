@@ -95,6 +95,7 @@ export const SignUp = () => {
                   type="text"
                   name="email"
                   placeholder="Enter Email"
+                  style={{ backgroundColor: "inherit" }}
                   className={
                     "form-control" +
                     (errors.email && touched.email ? " is-invalid" : "")
@@ -112,6 +113,7 @@ export const SignUp = () => {
                   type="text"
                   name="name"
                   placeholder="Enter Name"
+                  style={{ backgroundColor: "inherit" }}
                   className={
                     "form-control" +
                     (errors.name && touched.name ? " is-invalid" : "")
@@ -129,6 +131,7 @@ export const SignUp = () => {
                   type="text"
                   name="password"
                   placeholder="Enter Password"
+                  style={{ backgroundColor: "inherit" }}
                   className={
                     "form-control" +
                     (errors.password && touched.password ? " is-invalid" : "")
@@ -146,6 +149,7 @@ export const SignUp = () => {
                   type="password"
                   name="confirm_password"
                   placeholder="Confirm Password"
+                  style={{ backgroundColor: "inherit" }}
                   className={
                     "form-control" +
                     (errors.confirm_password && touched.confirm_password

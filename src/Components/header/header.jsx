@@ -17,6 +17,7 @@ import DrawerComp from "./drawer";
 import { ProfileModal } from "./ProfileModal";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { NotificationDialog } from "./notificationDialog";
+import chatPattern from "../../animations/chatpattern.png";
 
 export const Header = () => {
   const [value, setValue] = useState(0);
@@ -34,7 +35,14 @@ export const Header = () => {
 
   return (
     <React.Fragment>
-      <AppBar sx={{ background: "#fff" }}>
+      <AppBar
+        sx={{
+          background: "#fff",
+          backgroundImage: `url(${chatPattern})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
         <Toolbar>
           <>
             <DrawerComp />

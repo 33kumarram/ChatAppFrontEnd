@@ -5,6 +5,8 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from "../../Redux/actionCreators";
 import { getSender } from "../Config/getSender";
 import { CreateGroupChatModal } from "./CreateGroupChatModal";
+import chatPattern from "../../animations/chatpattern.png";
+
 export const ChatListDisplay = () => {
   const dispatch = useDispatch();
   const { selectChat, updateMyChats } = bindActionCreators(
@@ -33,7 +35,9 @@ export const ChatListDisplay = () => {
       style={{
         border: "1px solid black",
         borderRadius: "10px",
-        backgroundColor: "white",
+        backgroundImage: `url(${chatPattern})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
         height: "100vh",
         padding: "10px 20px",
         margin: "80px 10px 0 10px",
