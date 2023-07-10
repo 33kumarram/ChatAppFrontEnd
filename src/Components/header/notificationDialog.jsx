@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../Redux/actionCreators";
 import { List } from "@mui/icons-material";
+import "./notification.css";
 
 export const NotificationDialog = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ export const NotificationDialog = () => {
   const handleClick = (message) => {
     selectChat(message.chat);
     removeNotification(message);
+    handleClose();
   };
 
   const style = {
@@ -38,9 +40,17 @@ export const NotificationDialog = () => {
 
   return (
     <div>
-      <Button onClick={handleOpen}>
-        <NotificationsIcon style={{ color: "black" }} />
-      </Button>
+      {
+        <Button onClick={handleOpen}>
+          <div
+            className="bell-notification"
+            current-count={notifications.length}
+          >
+            {/* <i className="fa-solid fa-bell"></i> */}
+            <NotificationsIcon style={{ color: "black" }} />
+          </div>
+        </Button>
+      }
       <Modal
         open={open}
         onClose={handleClose}
