@@ -63,6 +63,12 @@ export const NotificationDialog = () => {
               return (
                 <div
                   key={notification._id}
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    padding: "4px 8px",
+                    borderRadius: "5px",
+                    marginBottom: "5px",
+                  }}
                   onClick={() => handleClick(notification)}
                 >
                   {notification.chat.isGroupChat
