@@ -10,7 +10,7 @@ import { API_URLS } from "../Services/ApiUrls";
 import { CircularProgress } from "@mui/material";
 import { ScrollableChat } from "./ScrollableChat";
 import { io } from "socket.io-client";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import animationData from "../../animations/typing.json";
 
 var socket, selectedChatCompare;
@@ -208,10 +208,14 @@ export const SingleChat = () => {
             {isTyping && (
               <div>
                 <Lottie
-                  width={30}
-                  height={30}
-                  options={defaultOptions}
-                  style={{ marginBottom: "15px", marginLeft: "10px" }}
+                  animationData={animationData}
+                  loop={true}
+                  style={{
+                    marginBottom: "5px",
+                    marginLeft: "10px",
+                    height: "30px",
+                    width: "30px",
+                  }}
                 />
               </div>
             )}
