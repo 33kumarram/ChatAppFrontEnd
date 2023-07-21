@@ -1,6 +1,5 @@
 import axios from "axios";
 import { API_NOTIFICATION_MESSAGES } from "../Config/ApiNotificationMessages";
-import { useSelector } from "react-redux";
 import { store } from "../../Redux/store";
 
 // const AuthToken =async()=>{
