@@ -5,7 +5,7 @@ import { isLastMessageOfSender } from "../Config/ScrollableChatLogic";
 import { ProfileModal } from "../header/ProfileModal";
 
 export const ScrollableChat = () => {
-  const { chatMessages, user } = useSelector((state) => state);
+  const { chatMessages, user, selectedChat } = useSelector((state) => state);
 
   return (
     <ScrollableFeed>
@@ -29,7 +29,9 @@ export const ScrollableChat = () => {
               <div style={{ display: "flex", maxWidth: "50%" }}>
                 {isLastMessageOfSender(chatMessages, i) &&
                 message.sender._id !== user._id ? (
-                  <ProfileModal user={message.sender} />
+                  selectedChat.isGroupChat && (
+                    <ProfileModal user={message.sender} />
+                  )
                 ) : (
                   <div style={{ width: "42px" }}></div>
                 )}

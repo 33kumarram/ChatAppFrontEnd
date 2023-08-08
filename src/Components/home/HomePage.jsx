@@ -8,7 +8,7 @@ export const HomePage = () => {
   const selectedChat = useSelector((state) => state.selectedChat);
   return (
     <div>
-      <Grid container>
+      <Grid container disableEqualOverflow>
         <Grid item lg={3} sm={4} xs={12}>
           <ChatListDisplay />
         </Grid>
