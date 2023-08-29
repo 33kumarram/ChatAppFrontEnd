@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import DialogTitle from "@mui/material/DialogTitle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { Box, Button, ListItem, Modal } from "@mui/material";
+import { Box, Button, Modal } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../Redux/actionCreators";
-import { List } from "@mui/icons-material";
 import "./notification.css";
 
 export const NotificationDialog = () => {

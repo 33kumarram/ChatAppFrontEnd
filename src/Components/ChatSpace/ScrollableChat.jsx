@@ -17,7 +17,6 @@ export const ScrollableChat = () => {
               style={{
                 display: "flex",
                 width: "100%",
-                display: "flex",
                 flexDirection: "column",
                 padding: "10px",
                 gap: "10px",
@@ -28,7 +27,7 @@ export const ScrollableChat = () => {
             >
               <div style={{ display: "flex", maxWidth: "50%" }}>
                 {isLastMessageOfSender(chatMessages, i) &&
-                message.sender._id !== user._id ? (
+                  message.sender._id !== user._id ? (
                   selectedChat.isGroupChat && (
                     <ProfileModal user={message.sender} />
                   )

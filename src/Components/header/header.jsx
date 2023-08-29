@@ -5,9 +5,6 @@ import {
   Tab,
   Tabs,
   Toolbar,
-  Typography,
-  useMediaQuery,
-  useTheme,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,10 +18,7 @@ import chatPattern from "../../animations/chatpattern.png";
 
 export const Header = () => {
   const [value, setValue] = useState(0);
-  const [search, setSearch] = useState(false);
   const navigate = useNavigate();
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
 
   const dispatch = useDispatch();
   const { userLogIn } = bindActionCreators(actionCreators, dispatch);

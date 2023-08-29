@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { API_URLS } from "../Services/ApiUrls";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -56,30 +56,30 @@ export const ChatListDisplay = () => {
       </div>
       {myChats?.length > 0
         ? myChats.map((chat) => {
-            return (
-              <div
-                key={chat._id}
-                style={{
-                  height: "60px",
-                  backgroundColor:
-                    selectedChat?._id !== chat._id ? "#E7E7E7" : "#38B2AC",
-                  color: selectedChat?._id !== chat._id ? "black" : "white",
-                  display: "flex",
-                  marginTop: "10px",
-                  paddingLeft: "8px",
-                  alignItems: "center",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                  gap: "10px",
-                  border: "none",
-                  width: "100%",
-                }}
-                onClick={() => selectNewChat(chat)}
-              >
-                {chat.isGroupChat ? chat.chatName : getSender(chat.users, user)}
-              </div>
-            );
-          })
+          return (
+            <div
+              key={chat._id}
+              style={{
+                height: "60px",
+                backgroundColor:
+                  selectedChat?._id !== chat._id ? "#E7E7E7" : "#38B2AC",
+                color: selectedChat?._id !== chat._id ? "black" : "white",
+                display: "flex",
+                marginTop: "10px",
+                paddingLeft: "8px",
+                alignItems: "center",
+                borderRadius: "5px",
+                cursor: "pointer",
+                gap: "10px",
+                border: "none",
+                width: "100%",
+              }}
+              onClick={() => selectNewChat(chat)}
+            >
+              {chat.isGroupChat ? chat.chatName : getSender(chat.users, user)}
+            </div>
+          );
+        })
         : null}
       {/* {console.log(selectedChat)} */}
     </div>

@@ -20,21 +20,21 @@ export const SingleChat = () => {
   const dispatch = useDispatch();
   const { selectChat, setChatMessages, updateNewMessage, setNotification } =
     bindActionCreators(actionCreators, dispatch);
-  const { selectedChat, user, notifications } = useSelector((state) => state);
+  const { selectedChat, user } = useSelector((state) => state);
   const [pendingMessage, setPendingMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [socketConnected, setSocketConnected] = useState(false);
   const [typing, setTyping] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    renderSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   renderSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
 
   const sendMessage = async (e) => {
     if (e.key === "Enter" && pendingMessage !== "") {

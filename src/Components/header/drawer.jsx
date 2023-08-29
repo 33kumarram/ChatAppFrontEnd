@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import {
   Drawer,
   IconButton,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Skeleton,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { SearchUser } from "./SearchUser";
 

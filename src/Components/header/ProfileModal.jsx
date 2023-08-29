@@ -1,6 +1,5 @@
 import { Box, Modal } from "@mui/material";
 import React, { useState } from "react";
-import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 
 const style = {
   position: "absolute",
