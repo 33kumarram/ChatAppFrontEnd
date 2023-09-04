@@ -105,7 +105,7 @@ export const SingleChat = () => {
   useEffect(() => {
     socket.on("message received", (newMessageReceived) => {
       if (!selectedChat || !(selectedChat._id == newMessageReceived.chat._id)) {
-        // show notification
+        // show notification  
         setNotification(newMessageReceived);
       } else if (selectedChat._id === newMessageReceived.chat._id) {
         updateNewMessage(newMessageReceived);
