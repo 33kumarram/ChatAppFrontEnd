@@ -15,6 +15,7 @@ import { ProfileModal } from "./ProfileModal";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { NotificationDialog } from "./notificationDialog";
 import chatPattern from "../../animations/chatpattern.png";
+import { Hidden } from "@mui/material";
 
 export const Header = () => {
   const [value, setValue] = useState(0);
@@ -54,21 +55,23 @@ export const Header = () => {
               value={value}
               onChange={(e, value) => setValue(value)}
             >
-              <Tab
-                label="Home"
-                onClick={() => navigate("/home")}
-                style={{ color: "#000" }}
-              />
-              <Tab
-                label="About Us"
-                onClick={() => navigate("/about")}
-                style={{ color: "#000" }}
-              />
-              <Tab
-                label="Contact Us"
-                onClick={() => navigate("/contact")}
-                style={{ color: "#000" }}
-              />
+              <Hidden smDown>
+                <Tab
+                  label="Home"
+                  onClick={() => navigate("/home")}
+                  style={{ color: "#000" }}
+                />
+                <Tab
+                  label="About Us"
+                  onClick={() => navigate("/about")}
+                  style={{ color: "#000" }}
+                />
+                <Tab
+                  label="Contact Us"
+                  onClick={() => navigate("/contact")}
+                  style={{ color: "#000" }}
+                />
+              </Hidden>
             </Tabs>
             <Button sx={{ marginLeft: "auto" }}>
               <ProfileModal user={user} />
