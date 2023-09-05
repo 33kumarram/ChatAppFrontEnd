@@ -19,7 +19,12 @@ export const HomePage = () => {
           }
         </Grid>
         <Grid item lg={9} sm={8} xs={12}>
-          <ChatSpace />
+          {selectedChat && selectedChat._id ?
+            <ChatSpace /> :
+            <Hidden smDown>
+              <ChatSpace />
+            </Hidden>
+          }
         </Grid>
       </Grid>
       {
