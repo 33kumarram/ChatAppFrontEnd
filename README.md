@@ -30,20 +30,20 @@ The MERN Chat Application is a real-time messaging platform that allows users to
 
 ## Features
 
-User Authentication:
+**User Authentication:**
 
 Sign up with email and password.
 Log in securely with your credentials.
 
 
-Individual Chats:
+**Individual Chats:**
 
 Initiate one-on-one conversations with other registered users.
 
 Send and receive text messages in real-time.
 
 
-Group Chats:
+**Group Chats:**
 
 Create custom group chats with multiple participants.
 
@@ -52,56 +52,58 @@ Collaborate and discuss topics with your groups.
 Easily manage group memberships and permissions.
 
 
-User Profiles:
+**User Profiles:**
 
 Customize your profile with a display picture and a brief bio.
 
 View profiles of other users to get to know them better.
 
 
-Notifications:
+**Notifications:**
 
 Receive real-time notifications for new messages and group activities.
 
 Stay informed about group invitations and mentions.
 
 
-Search Functionality:
+**Search Functionality:**
 
 Search for users and groups based on usernames or keywords.
 
-Technologies Used
 
 
-Frontend:
+##Technologies Used
 
-React: JavaScript library for building user interfaces.
 
-Redux: State management for React applications.
+##Frontend:
 
-Socket.io: Real-time communication between clients and server.
+**React:** JavaScript library for building user interfaces.
 
-Axios: HTTP client for making API requests.
+**Redux:** State management for React applications.
 
-Backend:
+**Socket.io:** Real-time communication between clients and server.
 
-Node.js: JavaScript runtime environment.
+**Axios:** HTTP client for making API requests.
 
-Express: Web application framework for Node.js.
+##Backend:
 
-MongoDB: NoSQL database for storing user data and messages.
+**Node.js:** JavaScript runtime environment.
 
-Mongoose: ODM (Object Data Modeling) library for MongoDB.
+**Express:** Web application framework for Node.js.
 
-Socket.io: Real-time communication server.
+**MongoDB:** NoSQL database for storing user data and messages.
 
-Authentication:
+**Mongoose:** ODM (Object Data Modeling) library for MongoDB.
 
-JWT (JSON Web Tokens): Secure authentication method.
+**Socket.io:** Real-time communication server.
 
-Deployment:
+#Authentication:
 
-Hostes application on netlify.com
+**JWT (JSON Web Tokens):** Secure authentication method.
+
+##Deployment:
+
+Application is hosted on netlify.com
 
 
 
