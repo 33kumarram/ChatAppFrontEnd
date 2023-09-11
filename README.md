@@ -71,8 +71,7 @@ Stay informed about group invitations and mentions.
 Search for users and groups based on usernames or keywords.
 
 
-
-##Technologies
+## Technologies
 
 
 **Frontend:**
@@ -87,7 +86,7 @@ Axios: HTTP client for making API requests.
 
 **Backend:**
 
-**Node.js:** JavaScript runtime environment.
+Node.js: JavaScript runtime environment.
 
 Express: Web application framework for Node.js.
 
