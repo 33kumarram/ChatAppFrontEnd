@@ -102,7 +102,9 @@ JWT (JSON Web Tokens): Secure authentication method.
 
 **Deployment:**
 
-Application is hosted on netlify.com
+Application is deployed on netlify.com
+
+<p>Deployed website: <strong><a href="https://rkchatapp.netlify.app/">https://rkchatapp.netlify.app/</a></strong>
 
 
 
