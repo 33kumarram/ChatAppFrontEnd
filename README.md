@@ -7,7 +7,7 @@
 ## Table Of Content
 
 - [Overview](#overview)
-
+- [Technologies](#technologies)
 - [Installation](#installation)
 
 - [Contributing](#contribution)
@@ -72,36 +72,36 @@ Search for users and groups based on usernames or keywords.
 
 
 
-##Technologies Used
+##Technologies
 
 
-##Frontend:
+**Frontend:**
 
-**React:** JavaScript library for building user interfaces.
+React: JavaScript library for building user interfaces.
 
-**Redux:** State management for React applications.
+Redux: State management for React applications.
 
-**Socket.io:** Real-time communication between clients and server.
+Socket.io: Real-time communication between clients and server.
 
-**Axios:** HTTP client for making API requests.
+Axios: HTTP client for making API requests.
 
-##Backend:
+**Backend:**
 
 **Node.js:** JavaScript runtime environment.
 
-**Express:** Web application framework for Node.js.
+Express: Web application framework for Node.js.
 
-**MongoDB:** NoSQL database for storing user data and messages.
+MongoDB: NoSQL database for storing user data and messages.
 
-**Mongoose:** ODM (Object Data Modeling) library for MongoDB.
+Mongoose: ODM (Object Data Modeling) library for MongoDB.
 
-**Socket.io:** Real-time communication server.
+Socket.io: Real-time communication server.
 
-#Authentication:
+**Authentication:**
 
-**JWT (JSON Web Tokens):** Secure authentication method.
+JWT (JSON Web Tokens): Secure authentication method.
 
-##Deployment:
+**Deployment:**
 
 Application is hosted on netlify.com
 
