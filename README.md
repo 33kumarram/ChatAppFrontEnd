@@ -84,21 +84,6 @@ Socket.io: Real-time communication between clients and server.
 
 Axios: HTTP client for making API requests.
 
-**Backend:**
-
-Node.js: JavaScript runtime environment.
-
-Express: Web application framework for Node.js.
-
-MongoDB: NoSQL database for storing user data and messages.
-
-Mongoose: ODM (Object Data Modeling) library for MongoDB.
-
-Socket.io: Real-time communication server.
-
-**Authentication:**
-
-JWT (JSON Web Tokens): Secure authentication method.
 
 **Deployment:**
 
