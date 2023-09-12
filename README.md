@@ -117,7 +117,7 @@ Once the dependencies are installed and the environment variables are set, start
 
 npm start
 
-The front-end application should now be running on http://localhost:3000, and any changes made to the code will be automatically reloaded in the brows
+The front-end application should now be running on http://localhost:3000, and any changes made to the code will be automatically reloaded in the browser.
 
 
 
